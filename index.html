@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FIZZ — Interactive Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="experience">
+
+        <!-- =================================
+             STICKY EXPERIENCE
+        ================================== -->
+
+        <section class="stage">
+
+            <!-- Background -->
+            <div class="grid"></div>
+
+
+            <!-- =================================
+                 NAVIGATION
+            ================================== -->
+
+            <nav class="navbar">
+
+                <div class="logo">
+                    FIZZ<span>.</span>
+                </div>
+
+                <div class="nav-info">
+                    <span>INTERACTIVE EXPERIENCE</span>
+                    <span class="scene-number">01 / 04</span>
+                </div>
+
+            </nav>
+
+
+            <!-- =================================
+                 SCENE 1 — HERO
+            ================================== -->
+
+            <div class="scene scene-one">
+
+                <div class="hero-copy">
+
+                    <p class="eyebrow">
+                        <span class="dot"></span>
+                        DIGITAL ENERGY
+                    </p>
+
+
+                    <h1>
+                        EVERYTHING
+                        <span>IS IN <em>MOTION.</em></span>
+                    </h1>
+
+
+                    <p class="intro-text">
+                        Scroll to interact with the FIZZ core.
+                    </p>
+
+
+                    <!-- =================================
+                         WHAT'S YOUR FIZZ?
+                    ================================== -->
+
+                    <div class="fizz-choice">
+
+                        <span class="choice-label">
+                            WHAT'S YOUR FIZZ?
+                        </span>
+
+
+                        <div class="choice-buttons">
+
+                            <button
+                                class="choice active"
+                                data-mode="create"
+                                type="button">
+                                CREATE
+                            </button>
+
+
+                            <button
+                                class="choice"
+                                data-mode="grow"
+                                type="button">
+                                GROW
+                            </button>
+
+
+                            <button
+                                class="choice"
+                                data-mode="connect"
+                                type="button">
+                                CONNECT
+                            </button>
+
+
+                            <button
+                                class="choice"
+                                data-mode="explore"
+                                type="button">
+                                EXPLORE
+                            </button>
+
+                        </div>
+
+
+                        <!-- Dynamic response -->
+                        <p
+                            class="choice-message"
+                            id="choiceMessage">
+                            Turn ideas into motion.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SCENE 2 — DISTURB
+            ================================== -->
+
+            <div class="scene scene-two">
+
+                <div class="scene-copy">
+
+                    <span class="scene-label">
+                        02 — DISTURB
+                    </span>
+
+
+                    <h2>
+                        CHANGE<br>
+                        THE <em>SYSTEM.</em>
+                    </h2>
+
+
+                    <p>
+                        Every scroll changes the state of the core.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SCENE 3 — TRANSFORM
+            ================================== -->
+
+            <div class="scene scene-three">
+
+                <div class="scene-copy">
+
+                    <span class="scene-label">
+                        03 — TRANSFORM
+                    </span>
+
+
+                    <h2>
+                        MOTION<br>
+                        BECOMES<br>
+                        <em>MEANING.</em>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SCENE 4 — COMPLETE
+            ================================== -->
+
+            <div class="scene scene-four">
+
+                <div class="final-copy">
+
+                    <span class="scene-label">
+                        04 — COMPLETE
+                    </span>
+
+
+                    <h2>
+                        YOU<br>
+                        MOVED<br>
+                        <em>IT.</em>
+                    </h2>
+                    <p class="final-tagline">
+    CREATE. GROW. CONNECT. EXPLORE.
+    <span>THAT'S THE FIZZ.</span>
+</p>
+
+
+                    <button
+                        id="resetButton"
+                        type="button">
+                        RESET EXPERIENCE ↻
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 FIZZ CORE VISUAL
+            ================================== -->
+
+            <div class="visual">
+
+                <!-- Orbit rings -->
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+
+                <!-- Floating particles -->
+                <span class="particle p1"></span>
+                <span class="particle p2"></span>
+                <span class="particle p3"></span>
+                <span class="particle p4"></span>
+                <span class="particle p5"></span>
+
+
+                <!-- Main FIZZ Core -->
+                <div class="core mode-create">
+
+                    <div class="core-light"></div>
+
+                    <div class="core-letter">
+                        F
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     LIVE CORE READOUT
+                ================================== -->
+
+                <div class="core-readout">
+
+                    <strong>FIZZ CORE</strong>
+
+
+                    <div>
+                        STATE:
+                        <span
+                            class="readout-value"
+                            id="coreState">
+                            STABLE
+                        </span>
+                    </div>
+
+
+                    <div>
+                        ENERGY:
+                        <span
+                            class="readout-value"
+                            id="coreEnergy">
+                            018
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SCROLL PROGRESS
+            ================================== -->
+
+            <div class="progress">
+
+                <div class="progress-track">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+                <span>SCROLL</span>
+
+            </div>
+
+
+            <!-- =================================
+                 STATISTICS
+            ================================== -->
+
+            <div class="stats">
+
+                <div>
+
+                    <strong>
+                        85<span>%</span>
+                    </strong>
+
+                    <small>
+                        PROJECT<br>
+                        SUCCESS
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        92<span>%</span>
+                    </strong>
+
+                    <small>
+                        CLIENT<br>
+                        TRUST
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        78<span>%</span>
+                    </strong>
+
+                    <small>
+                        CREATIVE<br>
+                        GROWTH
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         GSAP
+    ================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+
+    <!-- =================================
+         GSAP SCROLLTRIGGER
+    ================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+    <!-- =================================
+         YOUR JAVASCRIPT
+    ================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
