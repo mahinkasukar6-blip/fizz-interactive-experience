@@ -1,0 +1,2469 @@
+/* =========================================================
+
+   FIZZ — INTERACTIVE EXPERIENCE
+
+   FINAL POLISHED VERSION
+
+======================================================== */
+
+
+
+
+
+/* =========================================================
+
+   RESET
+
+======================================================== */
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    width: 100%;
+
+    min-height: 100%;
+
+
+
+    background: #080808;
+
+    color: #f5f5f5;
+
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   EXPERIENCE
+
+======================================================== */
+
+
+
+.experience {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 400vh;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   STICKY STAGE
+
+======================================================== */
+
+
+
+.stage {
+
+    position: sticky;
+
+    top: 0;
+
+
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 650px;
+
+
+
+    overflow: hidden;
+
+
+
+    background:
+
+        radial-gradient(
+
+            circle at 72% 52%,
+
+            rgba(255, 90, 31, 0.09),
+
+            transparent 22%
+
+        ),
+
+        #080808;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BACKGROUND GRID
+
+======================================================== */
+
+
+
+.grid {
+
+    position: absolute;
+
+    inset: 0;
+
+
+
+    pointer-events: none;
+
+
+
+    opacity: 0.72;
+
+
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(255, 255, 255, 0.035) 1px,
+
+            transparent 1px
+
+        ),
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255, 255, 255, 0.035) 1px,
+
+            transparent 1px
+
+        );
+
+
+
+    background-size: 65px 65px;
+
+
+
+    mask-image: linear-gradient(
+
+        to bottom,
+
+        black 0%,
+
+        black 72%,
+
+        transparent 100%
+
+    );
+
+
+
+    will-change: transform;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   NAVBAR
+
+======================================================== */
+
+
+
+.navbar {
+
+    position: absolute;
+
+
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+
+
+    padding: 30px 50px;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+
+
+    z-index: 40;
+
+}
+
+
+
+.logo {
+
+    color: #f5f5f5;
+
+
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+
+
+    letter-spacing: -1.5px;
+
+}
+
+
+
+.logo span {
+
+    color: #ff5a1f;
+
+}
+
+
+
+.nav-info {
+
+    display: flex;
+
+    align-items: center;
+
+
+
+    gap: 35px;
+
+
+
+    color: #606060;
+
+
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+
+
+    text-transform: uppercase;
+
+}
+
+
+
+.scene-number {
+
+    color: #f5f5f5;
+
+
+
+    min-width: 48px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SCENES
+
+======================================================== */
+
+
+
+.scene {
+
+    position: absolute;
+
+    inset: 0;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+
+
+    z-index: 8;
+
+
+
+    pointer-events: none;
+
+}
+
+
+
+.scene-one {
+
+    opacity: 1;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   HERO COPY
+
+======================================================== */
+
+
+
+.hero-copy {
+
+    position: relative;
+
+
+
+    width: 620px;
+
+    max-width: 620px;
+
+
+
+    margin-left: 7%;
+
+    margin-top: -5px;
+
+
+
+    z-index: 20;
+
+}
+
+
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+
+
+    gap: 11px;
+
+
+
+    margin-bottom: 27px;
+
+
+
+    color: #898989;
+
+
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+
+
+    text-transform: uppercase;
+
+}
+
+
+
+.dot {
+
+    width: 7px;
+
+    height: 7px;
+
+
+
+    flex-shrink: 0;
+
+
+
+    border-radius: 50%;
+
+
+
+    background: #ff5a1f;
+
+
+
+    box-shadow:
+
+        0 0 10px rgba(255, 90, 31, 0.9),
+
+        0 0 23px rgba(255, 90, 31, 0.28);
+
+}
+
+
+
+.hero-copy h1 {
+
+    width: 100%;
+
+
+
+    font-size: clamp(4rem, 6.2vw, 6.6rem);
+
+
+
+    line-height: 0.86;
+
+
+
+    letter-spacing: -5px;
+
+
+
+    font-weight: 900;
+
+
+
+    text-transform: uppercase;
+
+}
+
+
+
+.hero-copy h1 span {
+
+    display: block;
+
+}
+
+
+
+.hero-copy h1 em {
+
+    color: #ff5a1f;
+
+
+
+    font-style: normal;
+
+}
+
+
+
+.intro-text {
+
+    margin-top: 34px;
+
+
+
+    color: #747474;
+
+
+
+    font-size: 13px;
+
+
+
+    line-height: 1.6;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SCENE COPY
+
+======================================================== */
+
+
+
+.scene-copy {
+
+    position: relative;
+
+
+
+    width: 650px;
+
+    max-width: 650px;
+
+
+
+    margin-left: 7%;
+
+
+
+    z-index: 20;
+
+}
+
+
+
+.scene-label {
+
+    display: block;
+
+
+
+    color: #ff5a1f;
+
+
+
+    font-size: 10px;
+
+
+
+    letter-spacing: 4px;
+
+
+
+    text-transform: uppercase;
+
+}
+
+
+
+.scene-copy h2,
+
+.final-copy h2 {
+
+    margin-top: 25px;
+
+
+
+    font-size: clamp(4rem, 6.4vw, 7.1rem);
+
+
+
+    line-height: 0.84;
+
+
+
+    letter-spacing: -5px;
+
+
+
+    font-weight: 900;
+
+
+
+    text-transform: uppercase;
+
+}
+
+
+
+.scene-copy h2 em,
+
+.final-copy h2 em {
+
+    color: #ff5a1f;
+
+
+
+    font-style: normal;
+
+}
+
+
+
+.scene-copy p {
+
+    margin-top: 32px;
+
+
+
+    color: #707070;
+
+
+
+    font-size: 13px;
+
+
+
+    line-height: 1.6;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FINAL COPY
+
+======================================================== */
+
+
+
+.final-copy {
+
+    position: relative;
+
+
+
+    margin-left: 7%;
+
+
+
+    z-index: 20;
+
+}
+
+
+
+.final-copy h2 {
+
+    text-shadow:
+
+        0 18px 50px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+.final-copy button {
+
+    position: relative;
+
+
+
+    margin-top: 42px;
+
+
+
+    padding: 14px 22px;
+
+
+
+    border: 1px solid #3e3e3e;
+
+    border-radius: 999px;
+
+
+
+    background: transparent;
+
+
+
+    color: #f5f5f5;
+
+
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+
+
+    cursor: pointer;
+
+
+
+    pointer-events: auto;
+
+
+
+    overflow: hidden;
+
+
+
+    transition:
+
+        background 0.3s ease,
+
+        border-color 0.3s ease,
+
+        color 0.3s ease,
+
+        transform 0.3s ease;
+
+}
+
+
+
+.final-copy button:hover {
+
+    background: #ff5a1f;
+
+
+
+    border-color: #ff5a1f;
+
+
+
+    color: #080808;
+
+
+
+    transform: translateY(-2px);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MAIN VISUAL
+
+======================================================== */
+
+
+
+.visual {
+
+    position: absolute;
+
+
+
+    width: 460px;
+
+    height: 460px;
+
+
+
+    top: 53%;
+
+    right: 0;
+
+
+
+    transform: translateY(-50%);
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    z-index: 12;
+
+
+
+    pointer-events: none;
+
+
+
+    will-change: transform;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   ORBIT SYSTEM
+
+======================================================== */
+
+
+
+.orbit {
+
+    position: absolute;
+
+
+
+    border-radius: 50%;
+
+
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+
+
+
+    will-change: transform;
+
+}
+
+
+
+.orbit-one {
+
+    width: 410px;
+
+    height: 410px;
+
+
+
+    transform: rotate(20deg);
+
+}
+
+
+
+.orbit-two {
+
+    width: 335px;
+
+    height: 450px;
+
+
+
+    transform: rotate(-35deg);
+
+
+
+    border-color: rgba(255, 90, 31, 0.34);
+
+}
+
+
+
+.orbit-three {
+
+    width: 445px;
+
+    height: 245px;
+
+
+
+    transform: rotate(55deg);
+
+
+
+    border-color: rgba(255, 255, 255, 0.07);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FIZZ CORE
+
+======================================================== */
+
+
+
+.core {
+
+    position: relative;
+
+
+
+    width: 205px;
+
+    height: 205px;
+
+
+
+    border-radius: 50%;
+
+
+
+    background:
+
+        radial-gradient(
+
+            circle at 28% 23%,
+
+            #ffffff 0%,
+
+            #ededed 9%,
+
+            #b6b6b6 23%,
+
+            #666666 44%,
+
+            #242424 70%,
+
+            #0d0d0d 100%
+
+        );
+
+
+
+    box-shadow:
+
+        0 0 40px rgba(255, 90, 31, 0.22),
+
+        0 0 100px rgba(255, 90, 31, 0.10),
+
+        inset -28px -26px 50px rgba(0, 0, 0, 0.78),
+
+        inset 15px 13px 32px rgba(255, 255, 255, 0.38);
+
+
+
+    will-change: transform;
+
+}
+
+
+
+
+
+/* Main orange ring */
+
+
+
+.core::before {
+
+    content: "";
+
+
+
+    position: absolute;
+
+
+
+    inset: -11px;
+
+
+
+    border-radius: 50%;
+
+
+
+    border: 1px solid rgba(255, 90, 31, 0.72);
+
+
+
+    box-shadow:
+
+        0 0 22px rgba(255, 90, 31, 0.18);
+
+}
+
+
+
+
+
+/* Outer ring */
+
+
+
+.core::after {
+
+    content: "";
+
+
+
+    position: absolute;
+
+
+
+    inset: -25px;
+
+
+
+    border-radius: 50%;
+
+
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CORE LIGHT
+
+======================================================== */
+
+
+
+.core-light {
+
+    position: absolute;
+
+
+
+    width: 58px;
+
+    height: 25px;
+
+
+
+    left: 44px;
+
+    top: 38px;
+
+
+
+    border-radius: 50%;
+
+
+
+    background: rgba(255, 255, 255, 0.78);
+
+
+
+    filter: blur(12px);
+
+
+
+    transform: rotate(-35deg);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   CORE LETTER
+
+======================================================== */
+
+
+
+.core-letter {
+
+    position: absolute;
+
+
+
+    inset: 0;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    color: rgba(255, 255, 255, 0.84);
+
+
+
+    font-size: 72px;
+
+
+
+    font-weight: 900;
+
+
+
+    text-shadow:
+
+        0 0 25px rgba(255, 255, 255, 0.22);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   PARTICLES
+
+======================================================== */
+
+
+
+.particle {
+
+    position: absolute;
+
+
+
+    width: 5px;
+
+    height: 5px;
+
+
+
+    border-radius: 50%;
+
+
+
+    background: #ff5a1f;
+
+
+
+    box-shadow:
+
+        0 0 12px rgba(255, 90, 31, 0.85);
+
+
+
+    will-change: transform;
+
+}
+
+
+
+.p1 {
+
+    top: 78px;
+
+    left: 100px;
+
+}
+
+
+
+.p2 {
+
+    left: 130px;
+
+    bottom: 58px;
+
+}
+
+
+
+.p3 {
+
+    top: 120px;
+
+    right: 55px;
+
+}
+
+
+
+.p4 {
+
+    right: 110px;
+
+    bottom: 50px;
+
+}
+
+
+
+.p5 {
+
+    top: 235px;
+
+    right: 10px;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   STATS
+
+======================================================== */
+
+
+
+.stats {
+
+    position: absolute;
+
+
+
+    left: 7%;
+
+    bottom: 62px;
+
+
+
+    display: flex;
+
+    align-items: flex-end;
+
+
+
+    gap: 48px;
+
+
+
+    z-index: 25;
+
+}
+
+
+
+.stats > div {
+
+    display: flex;
+
+    align-items: flex-end;
+
+
+
+    gap: 9px;
+
+}
+
+
+
+.stats strong {
+
+    color: #f5f5f5;
+
+
+
+    font-size: 26px;
+
+
+
+    font-weight: 500;
+
+
+
+    line-height: 1;
+
+}
+
+
+
+.stats strong span {
+
+    color: #ff5a1f;
+
+}
+
+
+
+.stats small {
+
+    color: #606060;
+
+
+
+    font-size: 8px;
+
+
+
+    letter-spacing: 1.5px;
+
+
+
+    line-height: 1.35;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   SCROLL PROGRESS
+
+======================================================== */
+
+
+
+.progress {
+
+    position: absolute;
+
+
+
+    top: 50%;
+
+    right: 42px;
+
+
+
+    transform: translateY(-50%);
+
+
+
+    z-index: 40;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+
+
+    gap: 13px;
+
+
+
+    writing-mode: vertical-rl;
+
+
+
+    color: #505050;
+
+
+
+    font-size: 8px;
+
+
+
+    letter-spacing: 2px;
+
+
+
+    text-transform: uppercase;
+
+}
+
+
+
+.progress-track {
+
+    position: relative;
+
+
+
+    width: 1px;
+
+    height: 120px;
+
+
+
+    background: #303030;
+
+}
+
+
+
+.progress-fill {
+
+    position: absolute;
+
+
+
+    left: 0;
+
+    bottom: 0;
+
+
+
+    width: 1px;
+
+    height: 0%;
+
+
+
+    background: #ff5a1f;
+
+
+
+    box-shadow:
+
+        0 0 8px rgba(255, 90, 31, 0.55);
+
+}
+
+
+
+
+
+/* =========================================================
+
+   DESKTOP — FINAL BALANCE
+
+======================================================== */
+
+
+
+@media (min-width: 1101px) {
+
+
+
+    .hero-copy {
+
+        width: 620px;
+
+        max-width: 620px;
+
+    }
+
+
+
+    .hero-copy h1 {
+
+        font-size: clamp(4rem, 6.1vw, 6.4rem);
+
+    }
+
+
+
+    .visual {
+
+        width: 460px;
+
+        height: 460px;
+
+
+
+        right: 0;
+
+        top: 53%;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   LARGE DESKTOP
+
+======================================================== */
+
+
+
+@media (min-width: 1500px) {
+
+
+
+    .hero-copy {
+
+        width: 680px;
+
+        max-width: 680px;
+
+    }
+
+
+
+    .hero-copy h1 {
+
+        font-size: 6.6rem;
+
+    }
+
+
+
+    .scene-copy h2,
+
+    .final-copy h2 {
+
+        font-size: 7rem;
+
+    }
+
+
+
+    .visual {
+
+        right: 1%;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TABLET
+
+======================================================== */
+
+
+
+@media (max-width: 1100px) {
+
+
+
+    .navbar {
+
+        padding: 26px 30px;
+
+    }
+
+
+
+    .hero-copy,
+
+    .scene-copy,
+
+    .final-copy {
+
+        margin-left: 5%;
+
+    }
+
+
+
+    .hero-copy {
+
+        width: 58vw;
+
+        max-width: 600px;
+
+    }
+
+
+
+    .hero-copy h1 {
+
+        font-size: clamp(3.8rem, 7vw, 5.8rem);
+
+        letter-spacing: -4px;
+
+    }
+
+
+
+    .scene-copy {
+
+        width: 55vw;
+
+    }
+
+
+
+    .scene-copy h2,
+
+    .final-copy h2 {
+
+        font-size: clamp(3.7rem, 7vw, 6rem);
+
+        letter-spacing: -4px;
+
+    }
+
+
+
+    .visual {
+
+        width: 400px;
+
+        height: 400px;
+
+
+
+        right: -5%;
+
+        top: 55%;
+
+
+
+        opacity: 0.82;
+
+    }
+
+
+
+    .orbit-one {
+
+        width: 360px;
+
+        height: 360px;
+
+    }
+
+
+
+    .orbit-two {
+
+        width: 295px;
+
+        height: 390px;
+
+    }
+
+
+
+    .orbit-three {
+
+        width: 390px;
+
+        height: 220px;
+
+    }
+
+
+
+    .core {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+
+    .core-letter {
+
+        font-size: 64px;
+
+    }
+
+
+
+    .stats {
+
+        left: 5%;
+
+        gap: 30px;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MOBILE
+
+======================================================== */
+
+
+
+@media (max-width: 700px) {
+
+
+
+    .experience {
+
+        height: 400vh;
+
+    }
+
+
+
+    .stage {
+
+        min-height: 680px;
+
+    }
+
+
+
+    .navbar {
+
+        padding: 22px 20px;
+
+    }
+
+
+
+    .logo {
+
+        font-size: 21px;
+
+    }
+
+
+
+    .nav-info {
+
+        gap: 0;
+
+        font-size: 9px;
+
+    }
+
+
+
+    .nav-info > span:first-child {
+
+        display: none;
+
+    }
+
+
+
+    .hero-copy,
+
+    .scene-copy,
+
+    .final-copy {
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+    }
+
+
+
+    .hero-copy {
+
+        width: calc(100% - 55px);
+
+        max-width: none;
+
+
+
+        margin-top: -115px;
+
+    }
+
+
+
+    .hero-copy h1,
+
+    .scene-copy h2,
+
+    .final-copy h2 {
+
+        font-size: 17vw;
+
+
+
+        line-height: 0.87;
+
+
+
+        letter-spacing: -3px;
+
+    }
+
+
+
+    .eyebrow,
+
+    .scene-label {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+
+    .intro-text,
+
+    .scene-copy p {
+
+        max-width: 260px;
+
+
+
+        font-size: 11px;
+
+    }
+
+
+
+    .visual {
+
+        width: 320px;
+
+        height: 320px;
+
+
+
+        right: -45px;
+
+        top: 68%;
+
+
+
+        opacity: 0.92;
+
+    }
+
+
+
+    .orbit-one {
+
+        width: 285px;
+
+        height: 285px;
+
+    }
+
+
+
+    .orbit-two {
+
+        width: 240px;
+
+        height: 330px;
+
+    }
+
+
+
+    .orbit-three {
+
+        width: 315px;
+
+        height: 180px;
+
+    }
+
+
+
+    .core {
+
+        width: 145px;
+
+        height: 145px;
+
+    }
+
+
+
+    .core-letter {
+
+        font-size: 52px;
+
+    }
+
+
+
+    .core-light {
+
+        width: 42px;
+
+        height: 18px;
+
+
+
+        left: 31px;
+
+        top: 28px;
+
+    }
+
+
+
+    .stats {
+
+        left: 20px;
+
+        bottom: 28px;
+
+
+
+        gap: 16px;
+
+    }
+
+
+
+    .stats > div {
+
+        gap: 4px;
+
+    }
+
+
+
+    .stats strong {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .stats small {
+
+        font-size: 5.5px;
+
+
+
+        letter-spacing: 0.8px;
+
+    }
+
+
+
+    .progress {
+
+        right: 13px;
+
+    }
+
+
+
+    .progress-track {
+
+        height: 100px;
+
+    }
+
+
+
+    .final-copy button {
+
+        margin-top: 30px;
+
+
+
+        padding: 12px 18px;
+
+
+
+        font-size: 9px;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   ACCESSIBILITY
+
+======================================================== */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
+
+/* =========================================================
+   WHAT'S YOUR FIZZ? — BONUS INTERACTION
+========================================================= */
+
+.fizz-choice {
+    margin-top: 26px;
+    max-width: 510px;
+    position: relative;
+    z-index: 30;
+    pointer-events: auto;
+}
+
+.choice-label {
+    display: block;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.choice-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.choice {
+    padding: 9px 13px;
+    border: 1px solid #303030;
+    border-radius: 999px;
+    background: rgba(8, 8, 8, 0.65);
+    color: #777;
+    font-family: inherit;
+    font-size: 8px;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.choice:hover {
+    color: #fff;
+    border-color: #666;
+    transform: translateY(-2px);
+}
+
+.choice.active {
+    color: #080808;
+    background: #ff5a1f;
+    border-color: #ff5a1f;
+}
+
+.core.mode-create {
+    box-shadow:
+        0 0 45px rgba(255, 90, 31, 0.30),
+        0 0 110px rgba(255, 90, 31, 0.12),
+        inset -28px -26px 50px rgba(0, 0, 0, 0.78),
+        inset 15px 13px 32px rgba(255, 255, 255, 0.38);
+}
+
+.core.mode-grow {
+    box-shadow:
+        0 0 58px rgba(255, 90, 31, 0.40),
+        0 0 140px rgba(255, 90, 31, 0.16),
+        inset -28px -26px 50px rgba(0, 0, 0, 0.70),
+        inset 15px 13px 32px rgba(255, 255, 255, 0.45);
+}
+
+.core.mode-connect {
+    box-shadow:
+        0 0 35px rgba(255, 255, 255, 0.18),
+        0 0 100px rgba(255, 90, 31, 0.20),
+        inset -22px -20px 46px rgba(0, 0, 0, 0.68),
+        inset 18px 15px 35px rgba(255, 255, 255, 0.40);
+}
+
+.core.mode-explore {
+    box-shadow:
+        0 0 68px rgba(255, 90, 31, 0.36),
+        0 0 155px rgba(255, 90, 31, 0.13),
+        inset -30px -30px 55px rgba(0, 0, 0, 0.82),
+        inset 18px 15px 38px rgba(255, 255, 255, 0.43);
+}
+
+.core-readout {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 25;
+    min-width: 120px;
+    padding: 10px 12px;
+    border-left: 1px solid rgba(255, 90, 31, 0.7);
+    background: rgba(8, 8, 8, 0.58);
+    backdrop-filter: blur(8px);
+    color: #666;
+    font-size: 7px;
+    letter-spacing: 1.6px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.core-readout strong {
+    display: block;
+    color: #f5f5f5;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.core-readout .readout-value {
+    color: #ff5a1f;
+}
+
+@media (min-width: 1101px) {
+    .fizz-choice {
+        max-width: 510px;
+    }
+}
+
+@media (max-width: 700px) {
+    .fizz-choice {
+        margin-top: 18px;
+        max-width: 285px;
+    }
+
+    .choice-label {
+        font-size: 7px;
+        letter-spacing: 2.5px;
+    }
+
+    .choice {
+        padding: 7px 10px;
+        font-size: 7px;
+    }
+
+    .core-readout {
+        right: 8px;
+        bottom: 8px;
+        min-width: 98px;
+        padding: 8px 9px;
+        font-size: 6px;
+    }
+
+    .core-readout strong {
+        font-size: 8px;
+    }
+}
+/* FIZZ CORE VISIBILITY FIX */
+
+.visual {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.core {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+/* =========================================================
+   FINAL FIZZ BRAND MESSAGE
+========================================================= */
+
+.final-tagline {
+    margin-top: 24px;
+
+    max-width: 430px;
+
+    color: #686868;
+
+    font-size: 10px;
+
+    letter-spacing: 2.8px;
+
+    line-height: 1.8;
+
+    text-transform: uppercase;
+}
+
+.final-tagline span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #ff5a1f;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE — FINAL
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .stage {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        left: 20px;
+        right: 20px;
+        top: 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-info {
+        gap: 10px;
+    }
+
+    .nav-info > span:first-child {
+        display: none;
+    }
+
+    .scene-number {
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .hero-copy {
+        left: 20px;
+        width: calc(100% - 40px);
+        max-width: none;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .hero-copy h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(44px, 12vw, 62px);
+
+    line-height: 0.88;
+
+    letter-spacing: -2.5px;
+
+    overflow: visible;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+    .hero-copy h1 span {
+        display: block;
+    }
+
+    .intro-text {
+        max-width: 250px;
+
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+
+    /* FIZZ CHOICES */
+
+    .fizz-choice {
+        margin-top: 18px;
+
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .choice-label {
+        font-size: 7px;
+        letter-spacing: 2.5px;
+    }
+
+    .choice-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 7px;
+
+    width: 210px;
+
+    max-width: 100%;
+}
+
+.choice {
+    width: 100%;
+
+    padding: 8px 6px;
+
+    font-size: 7px;
+
+    white-space: nowrap;
+
+    text-align: center;
+}
+
+    .choice-message {
+        margin-top: 8px;
+
+        max-width: 260px;
+
+        font-size: 13px;
+
+        line-height: 1.35;
+    }
+
+
+    /* FIZZ CORE */
+
+    .visual {
+    right: -95px !important;
+    top: 56%;
+    transform: translateY(-50%);
+    scale: 0.58;
+}
+
+    .core-readout {
+        right: 72px;
+
+        bottom: 12px;
+
+        min-width: 92px;
+
+        padding: 7px 8px;
+
+        font-size: 6px;
+
+        transform: rotate(-8deg);
+    }
+
+    .core-readout strong {
+        font-size: 7px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* STATS */
+
+    .stats {
+        left: 20px;
+
+        bottom: 22px;
+
+        width: calc(100% - 40px);
+
+        gap: 18px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+
+    .stats > div {
+        min-width: 72px;
+    }
+
+    .stats strong {
+        font-size: 26px;
+    }
+
+    .stats small {
+        font-size: 6px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    /* SCROLL INDICATOR */
+
+    .progress {
+        right: 10px;
+    }
+
+
+    /* SCENE COPY */
+
+    .scene-copy {
+        left: 20px;
+
+        width: calc(100% - 40px);
+    }
+
+    .scene-copy h2 {
+        font-size: clamp(50px, 14vw, 78px);
+
+        line-height: 0.88;
+
+        letter-spacing: -3px;
+    }
+
+    .scene-copy p {
+        max-width: 240px;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    /* FINAL SCENE */
+
+    .final-copy {
+        left: 20px;
+
+        width: calc(100% - 40px);
+    }
+
+    .final-copy h2 {
+        font-size: clamp(56px, 16vw, 86px);
+
+        line-height: 0.84;
+
+        letter-spacing: -3px;
+    }
+
+    .final-tagline {
+        margin-top: 18px;
+
+        max-width: 280px;
+
+        font-size: 7px;
+
+        letter-spacing: 1.8px;
+
+        line-height: 1.7;
+    }
+
+    .final-tagline span {
+        margin-top: 4px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    #resetButton {
+        margin-top: 18px;
+
+        padding: 10px 14px;
+
+        font-size: 8px;
+    }
+
+}
